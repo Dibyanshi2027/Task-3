@@ -1,0 +1,70 @@
+
+1. SELECT * FROM customers;
+
+Customer_ID | Customer_Name | Segment
+C101        | Amit Sharma   | Consumer
+C102        | Priya Das     | Corporate
+C103        | Rahul Singh   | Home Office
+C104        | Neha Patel    | Consumer
+C105        | Arjun Verma   | Corporate
+
+
+2. SELECT * FROM orders;
+
+Order_ID | Customer_ID | Region  | Category         | Sales
+1        | C101        | West    | Technology       | 1200
+2        | C102        | East    | Furniture        | 450
+3        | C103        | South   | Office Supplies  | 300
+4        | C101        | West    | Technology       | 900
+5        | C104        | Central | Furniture        | 700
+
+
+3. WHERE (Region = 'West')
+
+Order_ID | Customer_ID | Region | Category   | Sales
+1        | C101        | West   | Technology | 1200
+4        | C101        | West   | Technology | 900
+
+
+4. ORDER BY Sales DESC
+
+Order_ID | Customer_ID | Sales
+1        | C101        | 1200
+4        | C101        | 900
+5        | C104        | 700
+2        | C102        | 450
+3        | C103        | 300
+
+
+5. GROUP BY Category (Total Sales)
+
+Category         | Total_Sales
+Technology       | 2100
+Furniture        | 1150
+Office Supplies  | 300
+
+
+6. INNER JOIN (customers + orders)
+
+Order_ID | Customer_Name | Category        | Sales
+1        | Amit Sharma   | Technology      | 1200
+2        | Priya Das     | Furniture       | 450
+3        | Rahul Singh   | Office Supplies | 300
+4        | Amit Sharma   | Technology      | 900
+5        | Neha Patel    | Furniture       | 700
+
+
+7. Subquery (Sales > Average)
+
+Order_ID | Sales
+1        | 1200
+4        | 900
+5        | 700
+
+
+8. View (Top Sales > 500)
+
+Order_ID | Customer_ID | Sales
+1        | C101        | 1200
+4        | C101        | 900
+5        | C104        | 700

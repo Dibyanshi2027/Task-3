@@ -1,0 +1,6 @@
+Order_ID,Customer_ID,Region,Category,Sales
+1,C101,West,Technology,1200
+2,C102,East,Furniture,450
+3,C103,South,Office Supplies,300
+4,C101,West,Technology,900
+5,C104,Central,Furniture,700
